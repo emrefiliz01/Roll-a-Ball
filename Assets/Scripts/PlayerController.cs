@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public Text countText;
     public Text winText;
 
+    public GameObject pickUpContainer;
+    private int winCondition;
+
+
     private Rigidbody rb;
     private int count;
 
@@ -17,6 +21,8 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+
+        winCondition = pickUpContainer.transform.childCount;
     }
 
     void FixedUpdate()
@@ -43,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void SetCountText ()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 13)
+        if (count >= winCondition)
         {
             winText.text = "You Win!";
         }

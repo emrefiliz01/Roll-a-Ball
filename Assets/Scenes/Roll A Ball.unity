@@ -1062,6 +1062,7 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 1181129592}
   winText: {fileID: 251201339}
+  pickUpContainer: {fileID: 228987190}
 --- !u!1 &1140870429
 GameObject:
   m_ObjectHideFlags: 0
